@@ -23,6 +23,7 @@ export default Vue.extend({
   },
   async mounted() {
     this.fetchPosts(4);
+    console.log(111);
   }
 });
 </script>
