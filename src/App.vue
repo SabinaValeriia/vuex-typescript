@@ -1,5 +1,5 @@
 <template lang="pug">
-  #app
+#app
     <Header></Header>
     <PostForm></PostForm>
     .post(v-for="post in validPosts"  :key="post.id")

@@ -1,5 +1,5 @@
 <template lang="pug">
-    .container 
+.container 
         .header 
             img(src="../assets/img/logo.png", alt="")
             .header__box
