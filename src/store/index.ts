@@ -7,7 +7,8 @@ Vue.use(Vuex)
 let store =  new  Vuex.Store ({
  
   modules: {
-    post
+    post,
+    // books
   }
 });
 
