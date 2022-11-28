@@ -1,18 +1,28 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+<template lang="pug">
+  #app
+    <PostForm></PostForm>
+    .post(v-for="post in validPosts"  :key="post.id")
+      h2 {{post.title}}
+      p {{post.body}}
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import PostForm from './components/PostForm.vue'
+import { mapGetters, mapActions} from 'vuex'
 
 export default Vue.extend({
   name: 'App',
+  computed: {
+    ...mapGetters(['validPosts']),
+   
+  },
+  methods: {...mapActions(["fetchPosts"])},
   components: {
-    HelloWorld
+    PostForm,
+  },
+  async mounted() {
+    this.fetchPosts(4);
   }
 });
 </script>
