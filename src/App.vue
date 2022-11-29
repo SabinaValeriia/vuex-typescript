@@ -4,6 +4,12 @@
     .post(v-for="post in validPosts"  :key="post.id")
       h2 {{post.title}}
       p {{post.body}}
+
+    .user(v-for="user in validUsers" :key="user.id")
+      h2 {{user.name}}
+      p {{user.username}}
+     
+
 </template>
 
 <script lang="ts">
@@ -14,16 +20,17 @@ import { mapGetters, mapActions} from 'vuex'
 export default Vue.extend({
   name: 'App',
   computed: {
-    ...mapGetters(['validPosts']),
+    ...mapGetters(['validPosts', 'validUsers']),
    
   },
-  methods: {...mapActions(["fetchPosts"])},
+  methods: {...mapActions(["fetchPosts", "fetchUsers"])},
   components: {
     PostForm,
   },
   async mounted() {
     this.fetchPosts(4);
     console.log(111);
+    this.fetchUsers();
   }
 });
 </script>
