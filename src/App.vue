@@ -1,7 +1,13 @@
 <template lang="pug">
+<<<<<<< HEAD
 #app
   <Header></Header>
   <PostForm></PostForm>
+=======
+  #app
+    <Header></Header>
+    <PostForm></PostForm>
+>>>>>>> Add component Header
     .post(v-for="post in validPosts"  :key="post.id")
       h2 {{post.title}}
       p {{post.body}}
@@ -85,8 +91,11 @@ input{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #081b2e;
+<<<<<<< HEAD
   background: rgb(170, 170, 179);
   margin-top: 60px;
 
+=======
+>>>>>>> Add component Header
 }
 </style>
