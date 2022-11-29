@@ -16,6 +16,7 @@
     },
     methods: {
       ...mapMutations(["createPost"]),
+      
       submit() {
         this.createPost({
           title: this.title,
@@ -27,3 +28,23 @@
     }
   };
   </script>
+
+
+<style>
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+}
+
+button {
+  width: 300px;
+  background-color: rgb(196, 196, 216);
+  padding: 10px;
+}
+</style>

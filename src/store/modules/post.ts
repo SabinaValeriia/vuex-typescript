@@ -16,7 +16,7 @@ export default {
         },
         createPost(state: { posts: any[]; }, newPost: any) {
             state.posts.unshift(newPost)
-        }
+        },
     },
     state: {
         helloMessage: "Hello World",

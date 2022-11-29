@@ -15,7 +15,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import PostForm from './components/PostForm.vue'
-import { mapGetters, mapActions} from 'vuex'
+import { mapGetters, mapActions, mapMutations} from 'vuex'
 
 export default Vue.extend({
   name: 'App',
@@ -23,7 +23,14 @@ export default Vue.extend({
     ...mapGetters(['validPosts', 'validUsers']),
    
   },
+<<<<<<< HEAD
   methods: {...mapActions(["fetchPosts", "fetchUsers"])},
+=======
+  methods: {
+    ...mapActions(["fetchPosts"])
+    
+  },
+>>>>>>> Add console.log
   components: {
     PostForm,
   },
@@ -41,8 +48,12 @@ export default Vue.extend({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+<<<<<<< HEAD
   padding: 10px;
   color: #2c3e50;
+=======
+  color: #081b2e;
+>>>>>>> Add console.log
   margin-top: 60px;
 }
 </style>
