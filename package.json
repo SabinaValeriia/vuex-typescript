@@ -9,6 +9,7 @@
   "dependencies": {
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
+    "scss-reset": "^1.2.2",
     "stylus": "^0.59.0",
     "stylus-loader": "^7.1.0",
     "vue": "^2.6.14",
