@@ -37,6 +37,7 @@ export default Vue.extend({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #081b2e;
+  background: rgb(170, 170, 179);
   margin-top: 60px;
 }
 </style>
