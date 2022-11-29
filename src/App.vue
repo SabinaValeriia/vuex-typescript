@@ -1,7 +1,7 @@
 <template lang="pug">
 #app
-    <Header></Header>
-    <PostForm></PostForm>
+  <Header></Header>
+  <PostForm></PostForm>
     .post(v-for="post in validPosts"  :key="post.id")
       h2 {{post.title}}
       p {{post.body}}
@@ -85,5 +85,8 @@ input{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #081b2e;
+  background: rgb(170, 170, 179);
+  margin-top: 60px;
+
 }
 </style>
