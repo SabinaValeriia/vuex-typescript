@@ -1,21 +1,17 @@
 <template lang="pug">
-<<<<<<< HEAD
 #app
   <Header></Header>
   <PostForm></PostForm>
-=======
-  #app
-    <Header></Header>
-    <PostForm></PostForm>
->>>>>>> Add component Header
     .post(v-for="post in validPosts"  :key="post.id")
       h2 {{post.title}}
       p {{post.body}}
+  <Hotel></Hotel>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import PostForm from './components/PostForm.vue'
+import Hotel from './components/Hotel.vue'
 import Header from './components/Header.vue'
 import { mapGetters, mapActions, mapMutations} from 'vuex'
 
@@ -30,7 +26,7 @@ export default Vue.extend({
     
   },
   components: {
-    PostForm, Header
+    PostForm, Header, Hotel
   },
   async mounted() {
     this.fetchPosts(4);
@@ -91,11 +87,7 @@ input{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #081b2e;
-<<<<<<< HEAD
   background: rgb(170, 170, 179);
-  margin-top: 60px;
 
-=======
->>>>>>> Add component Header
 }
 </style>

@@ -19,7 +19,6 @@ export default {
         },
     },
     state: {
-        helloMessage: "Hello World",
         posts: []
     },
     getters: {

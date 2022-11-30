@@ -1,50 +1,223 @@
 {
     "hotels": [
         {
-            "img": "parka.png",
-            "name": "Белая куртка",
-            "price": "2900"
+            "page": "1",
+            "per_page": "10",
+            "order_key": "recommended",
+            "order_by": "desc",
+            "guests_number": "1",
+            "search_object": {
+                "left_latitude": "35.519042",
+                "left_longitude": "139.5628611",
+                "right_latitude": "35.8174453",
+                "right_longitude": "139.9188743"
+            },
+            "non_smoking_options": [],
+            "map_search": false,
+            "autocomplete_params": {
+                "place_id": "ChIJXSModoWLGGARILWiCfeu2M0",
+                "address_components": [
+                    {
+                        "long_name": "東京",
+                        "short_name": "東京",
+                        "types": [
+                            "colloquial_area",
+                            "locality",
+                            "political"
+                        ]
+                    },
+                    {
+                        "long_name": "東京都",
+                        "short_name": "東京都",
+                        "types": [
+                            "administrative_area_level_1",
+                            "political"
+                        ]
+                    },
+                    {
+                        "long_name": "日本",
+                        "short_name": "JP",
+                        "types": [
+                            "country",
+                            "political"
+                        ]
+                    }
+                ],
+                "geometry": {
+                        "bounds": {"south": "35.519042", "west": "139.5628611", "north": 35.8174453, "east": "139.9188743"
+                    },
+                        "location": {"lat": "35.6803997", "lng": "139.7690174"
+                    },
+                        "location_type": "APPROXIMATE",
+                        "viewport": {"south": "35.519042", "west": "139.5628611", "north": "35.8174453", "east": "139.9188743"
+                    }
+                }
+            }
+            
         },
         {
-            "page":"1" ,
-            "per_page": "10" ,
+            "page": "1",
+            "per_page": "10",
             "order_key": "recommended",
-            “order_by”:“desc”,
-            “guests_number”:1,
-            “search_object”:
-                {
-                    “left_latitude”:35.519042,
-                    “left_longitude”:139.5628611,
-                    “right_latitude”:35.8174453,
-                    “right_longitude”:139.9188743
-                },
-            “non_smoking_options”:[],
-            “map_search”:false,
-            “autocomplete_params”:
-                {
-                    “place_id”:“ChIJXSModoWLGGARILWiCfeu2M0”,
-                    “address_components”:
-                        [
-                            {
-                                “long_name”:“東京“,
-                                ”short_name”:“東京“,
-                                ”types”:
-                                    [“colloquial_area”,“locality”,“political”]
-                            },
-                            {
-                                “long_name”:“東京都“,
-                                ”short_name”:“東京都“,
-                                ”types”:
-                                    [“administrative_area_level_1”,“political”]
-                            },
-                            {
-                                “long_name”:“日本“,
-                                ”short_name”:“JP”,
-                                “types”:
-                                    [“country”,“political”]
-                            }
-                        ],
-            “geometry”:
-                {“bounds”:{“south”:35.519042,“west”:139.5628611,“north”:35.8174453,“east”:139.9188743},“location”:{“lat”:35.6803997,“lng”:139.7690174},“location_type”:“APPROXIMATE”,“viewport”:{“south”:35.519042,“west”:139.5628611,“north”:35.8174453,“east”:139.9188743}}}}
+            "order_by": "desc",
+            "guests_number": "1",
+            "search_object": {
+                "left_latitude": "35.519042",
+                "left_longitude": "139.5628611",
+                "right_latitude": "35.8174453",
+                "right_longitude": "139.9188743"
+            },
+            "non_smoking_options": [],
+            "map_search": false,
+            "autocomplete_params": {
+                "place_id": "ChIJXSModoWLGGARILWiCfeu2M0",
+                "address_components": [
+                    {
+                        "long_name": "東京",
+                        "short_name": "東京",
+                        "types": [
+                            "colloquial_area",
+                            "locality",
+                            "political"
+                        ]
+                    },
+                    {
+                        "long_name": "東京都",
+                        "short_name": "東京都",
+                        "types": [
+                            "administrative_area_level_1",
+                            "political"
+                        ]
+                    },
+                    {
+                        "long_name": "日本",
+                        "short_name": "JP",
+                        "types": [
+                            "country",
+                            "political"
+                        ]
+                    }
+                ],
+                "geometry": {
+                        "bounds": {"south": "35.519042", "west": "139.5628611", "north": 35.8174453, "east": "139.9188743"
+                    },
+                        "location": {"lat": "35.6803997", "lng": "139.7690174"
+                    },
+                        "location_type": "APPROXIMATE",
+                        "viewport": {"south": "35.519042", "west": "139.5628611", "north": "35.8174453", "east": "139.9188743"
+                    }
+                }
+            }
+            
+        }, {
+            "page": "1",
+            "per_page": "10",
+            "order_key": "recommended",
+            "order_by": "desc",
+            "guests_number": "1",
+            "search_object": {
+                "left_latitude": "35.519042",
+                "left_longitude": "139.5628611",
+                "right_latitude": "35.8174453",
+                "right_longitude": "139.9188743"
+            },
+            "non_smoking_options": [],
+            "map_search": false,
+            "autocomplete_params": {
+                "place_id": "ChIJXSModoWLGGARILWiCfeu2M0",
+                "address_components": [
+                    {
+                        "long_name": "東京",
+                        "short_name": "東京",
+                        "types": [
+                            "colloquial_area",
+                            "locality",
+                            "political"
+                        ]
+                    },
+                    {
+                        "long_name": "東京都",
+                        "short_name": "東京都",
+                        "types": [
+                            "administrative_area_level_1",
+                            "political"
+                        ]
+                    },
+                    {
+                        "long_name": "日本",
+                        "short_name": "JP",
+                        "types": [
+                            "country",
+                            "political"
+                        ]
+                    }
+                ],
+                "geometry": {
+                        "bounds": {"south": "35.519042", "west": "139.5628611", "north": 35.8174453, "east": "139.9188743"
+                    },
+                        "location": {"lat": "35.6803997", "lng": "139.7690174"
+                    },
+                        "location_type": "APPROXIMATE",
+                        "viewport": {"south": "35.519042", "west": "139.5628611", "north": "35.8174453", "east": "139.9188743"
+                    }
+                }
+            }
+            
+        },
+        {
+            "page": "1",
+            "per_page": "10",
+            "order_key": "recommended",
+            "order_by": "desc",
+            "guests_number": "1",
+            "search_object": {
+                "left_latitude": "35.519042",
+                "left_longitude": "139.5628611",
+                "right_latitude": "35.8174453",
+                "right_longitude": "139.9188743"
+            },
+            "non_smoking_options": [],
+            "map_search": false,
+            "autocomplete_params": {
+                "place_id": "ChIJXSModoWLGGARILWiCfeu2M0",
+                "address_components": [
+                    {
+                        "long_name": "東京",
+                        "short_name": "東京",
+                        "types": [
+                            "colloquial_area",
+                            "locality",
+                            "political"
+                        ]
+                    },
+                    {
+                        "long_name": "東京都",
+                        "short_name": "東京都",
+                        "types": [
+                            "administrative_area_level_1",
+                            "political"
+                        ]
+                    },
+                    {
+                        "long_name": "日本",
+                        "short_name": "JP",
+                        "types": [
+                            "country",
+                            "political"
+                        ]
+                    }
+                ],
+                "geometry": {
+                        "bounds": {"south": "35.519042", "west": "139.5628611", "north": 35.8174453, "east": "139.9188743"
+                    },
+                        "location": {"lat": "35.6803997", "lng": "139.7690174"
+                    },
+                        "location_type": "APPROXIMATE",
+                        "viewport": {"south": "35.519042", "west": "139.5628611", "north": "35.8174453", "east": "139.9188743"
+                    }
+                }
+            }
+            
+        }
     ]
 }
