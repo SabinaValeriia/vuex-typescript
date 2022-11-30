@@ -1,13 +1,7 @@
-< <template>
-    <div class="hotel">
-        ffff
-        <HotelItem
-            v-for="(hotel, index) in HOTELS" 
-            :key="hotel.article"
-            :hotel_item_data="hotel"
-      
-         ></HotelItem>   
-        </div>
+<template lang="pug">
+.hotel
+    <HotelItem v-for="(hotel, index) in HOTELS" :key="hotel.article" :hotel_item_data="hotel"></HotelItem>   
+
 </template>
 
 <script lang="ts">

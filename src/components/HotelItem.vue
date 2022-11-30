@@ -1,19 +1,8 @@
-<template>
-    <div>
-         <div class="container ">
-           
-        
-                <p class="t">{{hotel_item_data.page}}</p>
-                <p class="t">{{hotel_item_data.search_object.left_latitude}}</p>
-                
-                <p class="">{{hotel_item_data.per_page}} грн</p>
-            <p class="">Подробности</p>
-           
-        </div>
-    
-        
-    </div>
-   
+<template lang="pug">
+.container
+    p {{hotel_item_data.page}}
+    p {{hotel_item_data.search_object.left_latitude}}
+    p {{hotel_item_data.per_page}}
 </template>
 
 <script lang="ts">
