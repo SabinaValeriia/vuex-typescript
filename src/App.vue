@@ -1,11 +1,6 @@
 <template lang="pug">
 #app
-  <Header></Header>
-  <PostForm></PostForm>
-    .post(v-for="post in validPosts"  :key="post.id")
-      h2 {{post.title}}
-      p {{post.body}}
-  <Hotel></Hotel>
+  <router-view></router-view>
 </template>
 
 <script lang="ts">
@@ -17,20 +12,11 @@ import { mapGetters, mapActions, mapMutations} from 'vuex'
 
 export default Vue.extend({
   name: 'App',
-  computed: {
-    ...mapGetters(['validPosts']),
-   
-  },
-  methods: {
-    ...mapActions(["fetchPosts"])
-    
-  },
+  
   components: {
     PostForm, Header, Hotel
   },
-  async mounted() {
-    this.fetchPosts(4);
-  }
+  
 });
 </script>
 
