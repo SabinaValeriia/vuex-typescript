@@ -10,7 +10,6 @@
             p {{hotel_item_data.page}}
             p {{hotel_item_data.search_object.left_latitude}}
             p {{hotel_item_data.per_page}}
-            p 
 </template>
 
 <style lang="scss">

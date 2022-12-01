@@ -12,7 +12,7 @@
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
     "useUnknownInCatchVariables": false,
-    
+    "noImplicitAny": false,
     "sourceMap": true,
     "baseUrl": ".",
     "allowJs": true,
