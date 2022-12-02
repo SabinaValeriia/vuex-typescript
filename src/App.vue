@@ -8,13 +8,15 @@ import Vue from 'vue';
 import PostForm from './components/PostForm.vue'
 import Hotel from './components/Hotel.vue'
 import Header from './components/Header.vue'
+import GoogleMap from './components/GoogleMap.vue'
 import { mapGetters, mapActions, mapMutations} from 'vuex'
 
 export default Vue.extend({
   name: 'App',
+ 
   
   components: {
-    PostForm, Header, Hotel
+    PostForm, Header, Hotel, GoogleMap
   },
   
 });

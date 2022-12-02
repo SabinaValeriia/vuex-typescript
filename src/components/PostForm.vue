@@ -1,5 +1,5 @@
 <template lang="pug">
-    form(@submit.prevent="submit")
+form(@submit.prevent="submit")
       input(type="text" placeholder="title" v-model="title")
       input(type="text" placeholder="body" v-model="body")
       button(type="submit") Create Post

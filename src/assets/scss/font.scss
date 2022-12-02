@@ -7,25 +7,24 @@
 
 @font-face{
     font-family: "MPLUS1p-ExtraBold";
-    src: url("../font/MPLUS1p-Regular.ttf") format("");
+    src: url("../font/MPLUS1p-ExtraBold.ttf") format("");
     font-weight: bold;
+    font-style: bold;
+}
+
+@font-face{
+    font-family: "MPLUS1p-Bold";
+    src: url("../font/MPLUS1p-Bold.ttf") format("");
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face{
+    font-family: "MPLUS1p-Medium";
+    src: url("../font/MPLUS1p-Medium.ttf") format("");
+    font-weight: normal;
     font-style: normal;
 }
 
-  
 
-// @font-face{
-//     font-family: "Raleway-ExtraLight";
-//     src: url("../font/Raleway-ExtraLight.ttf") format("");
-//     font-weight: normal;
-//     font-style: normal;
-  
-// }
- 
-// @font-face{
-//     font-family: "Raleway-Bold";
-//     src: url("../font/Raleway-Bold.ttf") format("");
-//     font-weight: bold;
-//     font-style: bold;
-// }
   

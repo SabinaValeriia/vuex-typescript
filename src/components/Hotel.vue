@@ -1,6 +1,8 @@
 <template lang="pug">
 .hotel
-    <HotelItem v-for="(hotel, index) in HOTELS" :key="hotel.article" :hotel_item_data="hotel"></HotelItem>   
+    <Shutoken></Shutoken>
+    <HotelItem v-for="(hotel, index) in HOTELS" :key="hotel.article" :hotel_item_data="hotel"></HotelItem>  
+
 
 </template>
 
@@ -8,6 +10,8 @@
 import Vue from 'vue';
 import {mapActions, mapGetters} from 'vuex'
 import HotelItem from './HotelItem.vue';
+import Shutoken from './Shutoken.vue';
+
 export default Vue.extend({
     // props: {
     //     hotel_data: {
@@ -31,6 +35,6 @@ export default Vue.extend({
         this.GET_HOTELS_FROM_API()
     },
 
-    components: {  HotelItem }
+    components: {  HotelItem, Shutoken }
 });
     </script> 

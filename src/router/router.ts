@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HotelView from '../views/HotelView.vue'
 import HomeView from '../views/HomeView.vue'
 import UsersView from '../views/UsersView.vue'
+import GoogleMap from '../components/GoogleMap.vue'
 
 Vue.use(VueRouter)
 
@@ -13,13 +14,18 @@ const routes  = [
     component: HotelView
   },
   {
+    path: '/map',
+    name: 'map',
+    component: GoogleMap
+  },
+  {
     path: '/users',
     name: 'users',
     component: UsersView
   },
   {
     path: '/',
-    name: 'hone',
+    name: 'home',
     component: HomeView
   },
   

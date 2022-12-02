@@ -13,7 +13,7 @@
     "useDefineForClassFields": true,
     "useUnknownInCatchVariables": false,
     "noImplicitAny": false,
-    "sourceMap": true,
+    // "sourceMap": true,
     "baseUrl": ".",
     "allowJs": true,
     "types": [
