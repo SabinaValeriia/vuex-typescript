@@ -1,6 +1,6 @@
 <template lang="pug">
 .container
-    .hotel__card 
+    .hotel__card
         .hotel__card_content
             div(style="display: flex; flex-direction: column")
                 img.hotel__card_img(:src="require(`@/assets/img/${hotel_item_data.img}`)")
@@ -241,6 +241,7 @@
     }
     &-third {
         display: flex;
+        width: 100%;
     }
 }
 }

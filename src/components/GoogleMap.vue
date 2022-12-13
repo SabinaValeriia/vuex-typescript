@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <div ref="googleMap" class="google-map"></div>
     </div>
   
