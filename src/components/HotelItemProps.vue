@@ -1,12 +1,13 @@
 <template lang="pug">
 .container
-    .hotel__card(v-bind="hotel.img" v-for="hotel in hotels")
+    input(type="text" v-model="search")
+    .hotel__card(v-for="hotel in filteredList" :key="hotel.search")
         .hotel__card_content
             div(style="display: flex; flex-direction: column")
                 img.hotel__card_img(:src="require(`@/assets/img/${hotel.img}`)")
                 button.hotel__card_button Hotel details
             .hotel__card_block
-                p.hotel__card_title {{hotel.name}}
+                p.hotel__card_title {{hotel.search}}
                 p.hotel__card_text {{hotel.desc}}
                 .hotel__card_box 
                     button.hotel__card_box_button-first Go to トラベル対応
@@ -55,26 +56,39 @@
 export default {
     data() {
         return {
+            search: '',
             hotels: [
                 {
                     id: 1,
-                    name: 'Hotel',
+                    search: 'Hotel',
                     img: 'foto1.png',
                     desc: '単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる'
                 },
                 {
                     id: 2,
-                    name: 'Akasaka',
+                    search: 'Akasaka',
                     img: 'foto2.png',
                     desc: '単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる'
                 },
                 {
                     id: 3,
-                    name: 'Monterey Akasaka',
+                    search: 'Monterey Akasaka',
                     img: 'foto2.png',
                     desc: '単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる'
                 },
             ]
+        }
+    },
+    computed: {
+        filteredList() {
+            let hot = this.search
+            return this.hotels.filter(function(elem){
+                if(hot === '') {
+                    return true;
+                }else {
+                    return elem.search.indexOf(hot) > -1;
+                }
+            })
         }
     }
 }

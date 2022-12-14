@@ -5,6 +5,7 @@ import HomeView from '../views/HomeView.vue'
 import HotelPropsView from '../views/HotelPropsView.vue'
 import UsersView from '../views/UsersView.vue'
 import GoogleMap from '../components/GoogleMap.vue'
+import Company from '../components/Company.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes  = [
     path: '/hotelProps',
     name: 'hotelProps',
     component: HotelPropsView
+  },
+  {
+    path: '/company',
+    name: 'company',
+    component: Company
   },
   
 ]
