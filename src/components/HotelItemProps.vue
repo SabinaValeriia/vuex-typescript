@@ -1,13 +1,13 @@
 <template lang="pug">
 .container
-    input(type="text" v-model="search")
-    .hotel__card(v-for="hotel in filteredList" :key="hotel.search")
+    Search(v-model="search" ref="searchFilter")
+    .hotel__card(v-for="hotel in searchResult" :key="hotel.id")
         .hotel__card_content
             div(style="display: flex; flex-direction: column")
                 img.hotel__card_img(:src="require(`@/assets/img/${hotel.img}`)")
                 button.hotel__card_button Hotel details
             .hotel__card_block
-                p.hotel__card_title {{hotel.search}}
+                p.hotel__card_title {{hotel.name}}
                 p.hotel__card_text {{hotel.desc}}
                 .hotel__card_box 
                     button.hotel__card_box_button-first Go to トラベル対応
@@ -53,26 +53,30 @@
 </template>
 
 <script>
+import Search from '@/components/Search'
 export default {
+    components: {
+      Search,
+    },
     data() {
         return {
-            search: '',
+            search: null,
             hotels: [
                 {
                     id: 1,
-                    search: 'Hotel',
+                    name: 'Hotel',
                     img: 'foto1.png',
                     desc: '単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる'
                 },
                 {
                     id: 2,
-                    search: 'Akasaka',
+                    name: 'Akasaka',
                     img: 'foto2.png',
                     desc: '単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる'
                 },
                 {
                     id: 3,
-                    search: 'Monterey Akasaka',
+                    name: 'Monterey Akasaka',
                     img: 'foto2.png',
                     desc: '単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる'
                 },
@@ -80,16 +84,28 @@ export default {
         }
     },
     computed: {
-        filteredList() {
-            let hot = this.search
-            return this.hotels.filter(function(elem){
-                if(hot === '') {
-                    return true;
-                }else {
-                    return elem.search.indexOf(hot) > -1;
-                }
-            })
+        // filteredList() {
+        //     let hot = this.search
+        //     return this.hotels.filter(function(elem){
+        //         if(hot === '') {
+        //             return true;
+        //         }else {
+        //             return elem.search.indexOf(hot) > -1;
+        //         }
+        //     })
+        // }
+        searchResult() {
+        if (this.search) {
+          return this.hotels.filter((item) => {
+            return this.search
+              .toLowerCase()
+              .split(" ")
+              .every((v) => item.name.toLowerCase().includes(v));
+          });
+        } else {
+          return this.hotels;
         }
+      },
     }
 }
 </script>

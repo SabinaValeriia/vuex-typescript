@@ -2,28 +2,35 @@
     <div class="container">
         <div class="search__block">
             <input 
-            type="text" 
-            placeholder="Name hotel" 
-            :value="search"
-            @input="$emit('update:search', $event.target.value)">
-            <button class="serch__button">Search</button>
-            <HotelItemProps></HotelItemProps>
-
+                class="search__block_input"
+                type="text" 
+                placeholder="Name hotel" 
+                :value="value"
+                @input="$emit('input', $event.target.value)"
+                ref="filter"
+            >
         </div>
 
     </div>
 </template>
 
 <script>
-import HotelItemProps from './HotelItemProps.vue';
-
 export default {
-    data() {
-        return {
-        };
+   
+    props: {
+      value: String,
     },
-    props: ['search'],
-    emits: ['update:search'],
-    components: { HotelItemProps }
+   
 };
 </script>
+
+<style lang="scss">
+.search__block{
+    display: flex;
+    justify-content: left;
+    &_input{
+        background: #FFFFFF;
+        border: 1px solid #E1E1E1;
+    }
+}
+</style>

@@ -1,7 +1,8 @@
 <template>
     <div class="home">
       <Header></Header>
-      <Search v-model:search="search"></Search>
+      <HotelItemProps></HotelItemProps>
+      
     </div>
   </template>
   
@@ -16,12 +17,14 @@
   import InputSearchFilter from "@/components/InputSearchFilter.vue";
   import Test from "@/components/Test.vue";
   // import Company from "@/components/Company.vue";
+  import HotelProps from "@/components/HotelProps.vue";
   import HotelItemProps from "@/components/HotelItemProps.vue";
   export default {
     components: {
       Header,
       Search, 
       HotelItemProps,
+      HotelProps,
       InputSearch,
       InputSearchFilter,
       ToDoList,
