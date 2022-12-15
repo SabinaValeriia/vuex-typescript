@@ -52,18 +52,18 @@
     button.hotel__card_more_button See more plans
 </template>
 
-<script>
-import Search from '@/components/Search'
+<script lang="ts">
+import Search from '@/components/Search.vue';
 export default {
     components: {
         Search,
     },
 
-    data() {
-        return {
-            search: null
-        }
-    },
+    data: () => ({
+        
+        search: ''
+   
+    }),
     props: {
         hotels: {
             type: Array

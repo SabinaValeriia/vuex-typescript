@@ -6,7 +6,7 @@
     </div>
   </template>
   
-  <script>
+  <script lang="ts">
   import Header from "@/components/Header.vue";
   import InputSearch from "@/components/InputSearch.vue";
   import Search from "@/components/Search.vue";
