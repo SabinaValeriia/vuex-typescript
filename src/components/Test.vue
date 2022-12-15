@@ -1,34 +1,50 @@
 <template>
-    <div id="app">
-  <input type="text" v-model="search">
+
+
+<div id="app">
+  <MyInput :name.sync="search"></MyInput>
+  <hr>
   <ul>
-    <li v-for="todo in todosByTitle" :key="todo.id">{{ todo.title }}</li>
+    <li v-for="hotel in filteredData">{{ hotel.name }}</li>
   </ul>
 </div>
 </template>
 
-<script>
-export default{
-  el: '#app',
-  data() {
-    return {
-      search: '',
-      todos: [
-        
-      ],
-    };
-  },
-  computed: {
-    todosByTitle() {
-      return this.todos.filter(item => item.title.indexOf(this.search) !== -1)
+
+<script lang="ts">
+import MyInput from './MyInput.vue';
+
+export default {
+    data: () => ({
+        hotels: [
+          {name:"John"},
+          {name: "Jane"},
+          {name: "Jim"}, 
+          {name: "Jim"}, 
+          {name: "Maggy"}, 
+          {name: "Trump"}, 
+          {name: "Che"}, 
+          ],
+        search: "",
+    }),
+    computed: {
+        filteredData: function () {
+          if (this.search) {
+          return this.hotels.filter((item) => {
+            return this.search
+              .toLowerCase()
+              .split(" ")
+              .every((v) => item.name.toLowerCase().includes(v));
+          });
+        } else {
+          return this.hotels;
+        }
+            // simple filter function
+            // return this.rawData.filter(el => el.toLowerCase()
+            //     .match(this.filter.toLowerCase()));
+        }
     },
-  },
-  beforeMount() {
-    fetch('https://jsonplaceholder.typicode.com/todos')
-      .then(response => response.json())
-      .then(json => {
-        this.todos = json;
-      })
-  },
+    components: { MyInput }
 }
+
 </script>

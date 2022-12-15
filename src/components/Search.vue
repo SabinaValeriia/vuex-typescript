@@ -5,8 +5,8 @@
                 class="search__block_input"
                 type="text" 
                 placeholder="Name hotel" 
-                :value="value"
-                @input="$emit('input', $event.target.value)"
+                :value="name"
+                @input="updateFilter"
                 ref="filter"
             >
         </div>
@@ -15,13 +15,14 @@
 </template>
 
 <script>
-export default {
-   
-    props: {
-      value: String,
-    },
-   
-};
+export default{
+    props: ['name'],
+      methods: {
+        updateFilter: function(e) {
+          this.$emit('update:name', e.target.value) 
+        }
+      }
+}
 </script>
 
 <style lang="scss">

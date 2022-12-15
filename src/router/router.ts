@@ -6,6 +6,8 @@ import HotelPropsView from '../views/HotelPropsView.vue'
 import UsersView from '../views/UsersView.vue'
 import GoogleMap from '../components/GoogleMap.vue'
 import Company from '../components/Company.vue'
+import App from '../components/App.vue'
+import Parent from '../components/Parent.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +41,16 @@ const routes  = [
     path: '/company',
     name: 'company',
     component: Company
+  },
+  {
+    path: '/app',
+    name: 'app',
+    component: App
+  },
+  {
+    path: '/parent',
+    name: 'parent',
+    component: Parent
   },
   
 ]

@@ -1,8 +1,9 @@
 <template>
     <div class="">
-      <input type="text" v-model="search" />
+      <!-- <input type="text" v-model="search" /> -->
+      <InputSearchFilter v-on:update:model-value=""></InputSearchFilter>
     <div class="text-white font-normal text-xs h-7 px-2.5 flex items-center transition duration-300 hover:cursor-pointer hover:bg-black-700 hover:rounded-xs"
-    v-for="item in filteredList"
+    v-for="item in items"
     :item="item.value"
     :key="item.id"
     >
