@@ -61,7 +61,7 @@ export default {
 
     data: () => ({
         
-        search: ''
+        search: '',
    
     }),
     props: {
