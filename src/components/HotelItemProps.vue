@@ -83,7 +83,11 @@ export default {
             }
         },
     },
-    methods: {}
+    watch: {
+        searchResult() {
+            console.log("Search", this.search)
+        }
+      }
 
 }
 </script>

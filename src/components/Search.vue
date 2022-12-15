@@ -21,7 +21,8 @@ export default{
         updateFilter: function(e) {
           this.$emit('update:name', e.target.value) 
         }
-      }
+      },
+     
 }
 </script>
 
