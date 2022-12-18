@@ -26,29 +26,46 @@
     },
     data() {
         return {
-            search: '',
+            // search: '',
             hotels: [
                 {
                     id: 1,
                     name: 'Hotel',
                     img: 'foto1.png',
+                    price: "5000",
                     desc: '単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる'
                 },
                 {
                     id: 2,
                     name: 'Akasaka',
                     img: 'foto2.png',
+                    price: "3000",
                     desc: '単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる'
                 },
                 {
                     id: 3,
                     name: 'Monterey Akasaka',
                     img: 'foto2.png',
+                    price: "1000",
+                    desc: '単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる'
+                },
+                {
+                    id: 4,
+                    name: 'My Hotel',
+                    img: 'foto2.png',
+                    price: "1500",
                     desc: '単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる単語が中国の文献などにみえはじめる'
                 },
             ]
         }
     },
+    watch: {
+        
+      "search.name": function(oldVal, newVal) {
+      console.log(oldVal + " " + newVal);
+    }
+
+      }
   }
     
     

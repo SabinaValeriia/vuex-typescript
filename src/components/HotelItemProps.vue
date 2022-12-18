@@ -1,7 +1,8 @@
 <template lang="pug">
 .container
     Search(:name.sync="search")
-    .hotel__card(v-for="hotel in searchResult" :key="hotel.id")
+    SortHotel(:name:price.sync="sortBy" :price.sync="sortBy")
+    .hotel__card(v-for="hotel in sortHotel, searchResult" :key="hotel.id")
         .hotel__card_content
             div(style="display: flex; flex-direction: column")
                 img.hotel__card_img(:src="require(`@/assets/img/${hotel.img}`)")
@@ -44,7 +45,7 @@
             .hotel__card_price_block
                 .hotel__card_price
                     p.hotel__card_price_text Price without discount
-                    p.hotel__card_price_text-sum ¥22,300
+                    p.hotel__card_price_text-sum ¥{{hotel.price}}
                 .hotel__card_price
                     button.hotel__card_price_button Go to トラベル対応 35$ Off!
                     p.hotel__card_price_text-red ¥19,200
@@ -54,19 +55,22 @@
 
 <script lang="ts">
 import Search from '@/components/Search.vue';
+import SortHotel from '@/components/SortHotel.vue';
 export default {
     components: {
-        Search,
+        Search, SortHotel
     },
 
     data: () => ({
-        
+        sortBy: "",
         search: '',
-   
+
     }),
     props: {
         hotels: {
-            type: Array
+            type: Array,
+            required: true,
+
         }
     },
     computed: {
@@ -81,13 +85,37 @@ export default {
             } else {
                 return this.hotels;
             }
+           
         },
+        sortHotel() {
+            function sortName(a, b) {
+                if (a.name < b.name)
+                    return -1;
+                if (a.name > b.name)
+                    return 1;
+                return 0;
+            }
+            
+              function sortPrice(a, b) {
+                if (a.price < b.price)
+                  return -1;
+                if (a.price > b.price)
+                  return 1;
+                return 0;
+              }
+
+            if (this.sortBy === "name") return this.hotels.sort(sortName);
+              else if (this.sortBy === "price") return this.hotels.sort(sortPrice);
+            else return this.hotels;
+        }
     },
     watch: {
         searchResult() {
             console.log("Search", this.search)
-        }
-      }
+        },
+
+
+    }
 
 }
 </script>

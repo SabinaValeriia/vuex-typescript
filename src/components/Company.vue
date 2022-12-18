@@ -1,51 +1,35 @@
 <template>
-    <div id="app">
-      <div class="text-left">
-        <h3>Cutsom Filter using VueJs</h3>
-        <Phone v-model="search" ref="searchFilter" />
-        <ul v-for="user in searchResult" :key="user.id">
-          <li>{{ user.name }}</li>
-        </ul>
-      </div>
-    </div>
-  </template>
-  
-  <script>
-  import Phone from "@/components/Phone";
-  
-  export default {
-    name: "App",
-    components: {
-      Phone,
-    },
-    data() {
+  <div>
+    <button @click="totalCount = totalCount + 1">Click me</button>
+  <p>{{ message }}</p>
+  </div>
+</template>
+
+<script>
+export default { 
+  name: "Counter",
+  data() {
       return {
-        search: null,
-        users: [
-          { id: 1, name: "john", email: "john@xyz.com" },
-          { id: 2, name: "lee min", email: "leemin@xyz.com" },
-          { id: 3, name: "alexa", email: "alexa@xyz.com" },
-          { id: 4, name: "rosy", email: "rosy@xyz.com" },
-          { id: 5, name: "joy", email: "joy@xyz.com" },
-          { id: 6, name: "john", email: "john@vue.com" },
-        ],
-      };
-    },
-    computed: {
-      searchResult() {
-        if (this.search) {
-          return this.users.filter((item) => {
-            return this.search
-              .toLowerCase()
-              .split(" ")
-              .every((v) => item.name.toLowerCase().includes(v));
-          });
-        } else {
-          return this.users;
-        }
-      },
-    },
-  };
-  </script>
-  
-  
+          // "message" will show up in the template above in 
+          message: "You haven't clicked yet!",
+          // This is the total number of times the button has been clicked
+          totalCount: 0
+      }
+  },
+  watch: {
+      // Watch totalCount for any changes
+      totalCount: function(newValue) {
+          // Depending on the value of totalCount, we will display custom messages to the user
+          if(newValue <= 10) {
+              this.message = `You have only clicked ${newValue} times.`;
+          }
+          else if(newValue <= 20) {
+              this.message = `Wow, you've clicked ${newValue} times!`;
+          }
+          else {
+              this.message = `Stop clicking, you've already clicked ${newValue} times!`;
+          }
+      }
+  }
+}
+</script>
